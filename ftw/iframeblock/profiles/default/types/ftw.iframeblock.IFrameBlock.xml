@@ -14,7 +14,7 @@
     <property name="allowed_content_types" />
 
     <!-- schema interface -->
-    <property name="schema">ftw.iframeblock.contents.iframblock.IIFrameBlock</property>
+    <property name="schema">ftw.iframeblock.contents.iframeblock.IIFrameBlockSchema</property>
 
     <!-- class used for content items -->
     <property name="klass">ftw.iframeblock.contents.iframeblock.IFrameBlock</property>
