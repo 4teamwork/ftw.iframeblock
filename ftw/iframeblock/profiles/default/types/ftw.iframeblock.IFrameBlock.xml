@@ -6,7 +6,7 @@
 
     <!-- Basic metadata -->
     <property name="title" i18n:translate="">iFrame block</property>
-    <property name="description" i18n:translate=""></property>
+    <property name="description" i18n:translate="iframeblock_description"></property>
     <property name="icon_expr" />
     <property name="allow_discussion">False</property>
     <property name="global_allow">False</property>

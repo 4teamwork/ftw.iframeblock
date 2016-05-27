@@ -23,8 +23,8 @@ msgid "iFrame block (add-on for ftw.simplelayout)"
 msgstr "iFrame-Block (Erweiterung für ftw.simplelayout)"
 
 #: ./ftw/iframeblock/profiles/default/types/ftw.iframeblock.iFrameBlock.xml
-msgid "The iFrame block gets a frame from another site and displays it."
-msgstr "Der iFrame-Block holt einen Frame von einer externen Seite und stellt ihn dar."
+msgid "iframeblock_description"
+msgstr ""
 
 #. Default: "This iFrame block is empty. Please add some content or remove the block."
 #: ./ftw/iframeblock/browser/templates/iframeblock.pt:9
