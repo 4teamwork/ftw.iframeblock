@@ -54,7 +54,8 @@ setup(
         'plone.dexterity',
         'plone.app.dexterity',
         'Plone',
-        'ftw.simplelayout',
+        'ftw.simplelayout [contenttypes, mapblock]',
+        'ftw.upgrade',
     ],
 
     tests_require=tests_require,

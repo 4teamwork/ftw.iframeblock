@@ -20,10 +20,8 @@ class IIFrameBlockSchema(form.Schema):
     height = schema.Int(
         title=_(u'iframeblock_height_label', default=u'Height'),
         required=True,
-        default='400'
+        default=400,
     )
-
-    form.order_before(title='*')
 
 alsoProvides(IIFrameBlockSchema, IFormFieldProvider)
 
