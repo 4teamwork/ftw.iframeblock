@@ -54,7 +54,7 @@ setup(
         'plone.dexterity',
         'plone.app.dexterity',
         'Plone',
-        'ftw.theming',
+        'ftw.simplelayout',
     ],
 
     tests_require=tests_require,
