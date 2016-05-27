@@ -54,6 +54,7 @@ setup(
         'plone.dexterity',
         'plone.app.dexterity',
         'Plone',
+        'ftw.theming',
     ],
 
     tests_require=tests_require,

@@ -1,0 +1,11 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      tal:omit-tag="python: 1"
+      i18n:domain="ftw.iframeblock">
+
+    <iframe tal:content="view/block_url" scrolling="no" class="iframeblock"></iframe>
+
+    <div tal:condition="python: view.can_add() and not context.content"
+         i18n:translate="empty_iframeblock_label">This iFrame block is empty. Please add some content or remove the block.</div>
+
+</html>
