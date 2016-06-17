@@ -7,4 +7,4 @@ class IFrameBlockView(BaseBlock):
         return self.index()
 
     def can_add(self):
-        return api.user.has_permission('ftw.iframblock: Add iFrame block')
+        return api.user.has_permission('ftw.iframeblock: Add iFrame block')

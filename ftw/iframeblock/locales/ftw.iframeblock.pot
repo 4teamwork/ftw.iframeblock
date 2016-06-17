@@ -20,34 +20,34 @@ msgstr ""
 
 #: ./ftw/iframeblock/profiles/default/types/ftw.iframeblock.IFrameBlock.xml
 msgid "iFrame block"
-msgstr "iFrame Block"
+msgstr ""
 
 #: ./ftw/iframeblock/configure.zcml:21
 msgid "iFrame block (add-on for ftw.simplelayout)"
-msgstr "iFrame-Block (Erweiterung für ftw.simplelayout)"
+msgstr ""
 
 #. Default: "When auto resize is set, the value of the \"Height\" field wont have any influence on how the block is displayed."
 #: ./ftw/iframeblock/contents/iframeblock.py:34
 msgid "iframeblock_auto_size_desc"
-msgstr "Wenn die automatische Skalierung eingeschaltet ist, hat der Wert aus dem Input-Feld \"Höhe\" keinen Einfluss auf das Aussehen des iFrame Blocks."
+msgstr ""
 
 #. Default: "Auto Size"
 #: ./ftw/iframeblock/contents/iframeblock.py:32
 msgid "iframeblock_auto_size_label"
-msgstr "Automatische Skalierung"
+msgstr ""
 
 #. Default: "Height"
 #: ./ftw/iframeblock/contents/iframeblock.py:26
 msgid "iframeblock_height_label"
-msgstr "Höhe"
+msgstr ""
 
 #. Default: "The given site must have the <a href=\"https://github.com/davidjbradshaw/iframe-resizer\" target=\"_blank\">iframe-resizer package</a> installed.<br>Without this package, the auto resize WONT work!"
 #: ./ftw/iframeblock/contents/iframeblock.py:18
 msgid "iframeblock_url_desc"
-msgstr "Die angegebene Seite muss über das <a href=\"https://github.com/davidjbradshaw/iframe-resizer\" target=\"_blank\">iframe-resizer</a> Packet verfügen. Ansonsten wird die automatische Skalierung nicht funktionieren."
+msgstr ""
 
 #. Default: "URL"
 #: ./ftw/iframeblock/contents/iframeblock.py:16
 msgid "iframeblock_url_label"
-msgstr "URL"
+msgstr ""
 
