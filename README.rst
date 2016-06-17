@@ -1,7 +1,6 @@
 TODO:
 
 - https://github.com/4teamwork/winterthur.web/issues/21
-- Implement `iframe-resizer` js
 - Write tests similar to `ftw.htmlblock` <https://github.com/4teamwork/ftw.htmlblock>
 
 
