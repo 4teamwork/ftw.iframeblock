@@ -7,6 +7,8 @@ from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 from zope.configuration import xmlconfig
+from ftw.simplelayout.tests import builders
+from ftw.iframeblock.tests import builders
 
 
 class FtwLayer(PloneSandboxLayer):
