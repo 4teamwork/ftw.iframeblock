@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0.0a1.dev0'
+version = '1.0.0.dev0'
 maintainer = '4teamwork'
 
 tests_require = [
@@ -18,11 +18,10 @@ extras_require = {
 }
 
 
-
 setup(
     name='ftw.iframeblock',
     version=version,
-    description='ftw.iframeblock',
+    description='A block for ftw.simplelayout',
     long_description=open('README.rst').read() + '\n' + open(
         os.path.join('docs', 'HISTORY.txt')).read(),
 
