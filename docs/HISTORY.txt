@@ -5,6 +5,8 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
+- Allow opening sub-page by passing it as GET parameter "i". [jone]
+
 - Update description of edit view.
   [raphael-s]
 
