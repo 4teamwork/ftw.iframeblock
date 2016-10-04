@@ -1,15 +1,41 @@
+.. contents:: Table of Contents
+
 Introduction
 ============
 
-This package is an addon for `ftw.simplelayout <http://github.com/4teamwork/ftw.simplelayout>`_. Please make sure you
-already installed ``ftw.simplelayout`` on your plone site before installing this addon.
+This package is an addon for `ftw.simplelayout`_.
+Please make sure you already installed `ftw.simplelayout`_
+on your plone site before installing this addon.
 
-``ftw.iframeblock`` privides a block for ``ftw.simplelayout``, which renders a iframe using
-`iframeResizer.js <https://github.com/davidjbradshaw/iframe-resizer#typical-setup>`_.
-Read carefully the setup instroctions of iframeresizer, you need a implementation on both domains.
+``ftw.iframeblock`` privides a block for `ftw.simplelayout`_,
+which renders a iframe using `iframe-resizer`_.
+Read the setup instructions of iframeresizer carefully:
+you need an implementation on both domains.
 
 
-.. contents:: Table of Contents
+Linking to sub pages
+--------------------
+
+When integrating other websites in iframes and indexing those
+contents in the search, we want to be able to link from the search
+to a specific iframed sub-page.
+
+In order to make this possible we need to be able to pass the requested
+sub-page as GET request param.
+
+For security reason, the origin of both URLs must be the same, otherwise the configured startpage is loaded.
+
+**Examples:**
+
+- ``http://localhost:8080/Plone/the-page?i=http://foo.ch/bar/baz.php``
+- ``http://localhost:8080/Plone/the-page?i_iframeblock2=http://foo.ch/bar/baz.php``
+
+
+Compatibility
+-------------
+
+Runs with `Plone <http://www.plone.org/>`_ `4.3.x`.
+
 
 Installation local development-environment
 ------------------------------------------
@@ -23,36 +49,6 @@ Installation local development-environment
     $ bin/buildout
     $ bin/instance fg
 
-Dev-Test-Release-Process
-------------------------
-
-If you want to develop features, you must follow this guide
-
-First checkout the package and create a new branch from the master:
-
-.. code:: bash
-
-    $ git clone git@github.com:4teamwork/ftw.iframeblock.git
-    $ cd ftw.iframeblock
-    $ git checkout -b my-mew-feature
-    $ git push origin -u my-new-feature
-
-If you are finnished and the feature is working fine, you can merge it into the
-master branch after the quality-check:
-
-.. code:: bash
-
-    $ git checkout master
-    $ git merge my-mew-feature
-    $ git push
-
-Now, the feature is available for other developers.
-
-
-Compatibility
--------------
-
-Runs with `Plone <http://www.plone.org/>`_ `4.3.x`.
 
 
 Links
@@ -68,3 +64,6 @@ Copyright
 This package is copyright by `4teamwork <http://www.4teamwork.ch/>`_.
 
 ``ftw.iframeblock`` is licensed under GNU General Public License, version 2.
+
+.. _ftw.simplelayout: http://github.com/4teamwork/ftw.simplelayout
+.. _iframe-resizer: https://github.com/davidjbradshaw/iframe-resizer
