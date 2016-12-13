@@ -53,7 +53,7 @@ setup(
         'plone.dexterity',
         'plone.app.dexterity',
         'Plone',
-        'ftw.simplelayout [contenttypes, mapblock]',
+        'ftw.simplelayout [contenttypes]',
         'ftw.upgrade',
     ],
 
