@@ -9,3 +9,7 @@
 @include ie-only(".sl-can-edit .ftw-iframeblock-iframeblock iframe") {
   pointer-events: none;
 }
+
+iframe.iframeblock.loading {
+  background: transparent url('#{$portal_url}/#{$spinner-url}') no-repeat center;
+}

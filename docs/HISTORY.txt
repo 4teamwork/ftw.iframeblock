@@ -5,7 +5,8 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Implement spinner while loading the iframe.
+  [mathias.leimgruber]
 
 
 1.2.0 (2016-12-13)
