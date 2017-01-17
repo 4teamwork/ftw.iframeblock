@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.3.2 (unreleased)
+1.3.2 (2017-01-17)
 ------------------
 
 - Arghhh the js part should now remove the loading css class from the prev. element.
