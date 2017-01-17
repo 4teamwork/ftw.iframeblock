@@ -10,6 +10,32 @@
   pointer-events: none;
 }
 
-iframe.iframeblock.loading {
-  background: transparent url('#{$portal_url}/#{$spinner-url}') no-repeat center;
+.ftw-iframeblock-iframeblock .sl-block-content {
+  position: relative;
+
+  .iframeSpinner {
+    display: none;
+  }
+
+  .iframeSpinner.loading {
+    background-color: transparent;
+    background-image: url('#{$portal_url}/#{$spinner-url}');
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    height: 200px;
+    position: absolute;
+    visibility: visible;
+    width: 100%;
+  }
+
+  iframe {
+    position: relative;
+  }
+}
+
+@include ie-only(".ftw-iframeblock-iframeblock .sl-block-content") {
+  .iframeSpinner.loading {
+    z-index: 1;
+  }
 }

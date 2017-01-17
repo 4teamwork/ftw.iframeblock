@@ -3,6 +3,7 @@
       tal:omit-tag="python: 1"
       i18n:domain="ftw.iframeblock">
 
+    <div class="iframeSpinner loading"></div>
     <iframe tal:attributes="src view/get_url;
                             height context/height"
             width="100%"
