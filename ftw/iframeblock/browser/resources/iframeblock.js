@@ -3,7 +3,7 @@
   "use strict";
 
   window.onIframeLoaded = function(element) {
-      $(element).removeClass('loading');
+      $(element).prev().removeClass('loading');
   };
 
 })();
