@@ -5,7 +5,7 @@ Changelog
 1.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Make IFrameBlock addable on plone site per default [raphael-s]
 
 
 1.3.2 (2017-01-17)
@@ -19,7 +19,7 @@ Changelog
 ------------------
 
 - Well... implement IE compatible spinner, which does not changes the bg color
-  of the iframe. 
+  of the iframe.
   [mathias.leimgruber]
 
 
