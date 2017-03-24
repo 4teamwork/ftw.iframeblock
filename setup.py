@@ -53,6 +53,7 @@ setup(
         'plone.dexterity',
         'plone.app.dexterity',
         'Plone',
+        'ftw.iframefix',
         'ftw.simplelayout [contenttypes]',
         'ftw.upgrade',
     ],
