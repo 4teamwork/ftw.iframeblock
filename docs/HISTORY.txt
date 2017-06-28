@@ -5,7 +5,8 @@ Changelog
 1.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Install ftw.iframefix
+  [Kevin Bieri]
 
 
 1.3.3 (2017-03-07)
