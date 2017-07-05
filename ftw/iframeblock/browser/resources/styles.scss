@@ -24,6 +24,14 @@
   }
 }
 
+@include ie-only(".sl-can-edit .ftw-iframeblock-iframeblock .sl-block-content") {
+  @include fix-iframe-cursor();
+}
+
+@include ie-only(".sl-can-edit .ftw-iframeblock-iframeblock iframe") {
+  @include fix-iframe-hover();
+}
+
 @include ie-only(".ftw-iframeblock-iframeblock .sl-block-content") {
   .iframeSpinner.loading {
     z-index: 1;
