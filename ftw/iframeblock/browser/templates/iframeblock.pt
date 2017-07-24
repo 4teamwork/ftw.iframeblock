@@ -5,9 +5,9 @@
 
     <div class="iframeSpinner loading"></div>
     <iframe tal:attributes="src view/get_url;
-                            height context/height"
+                            height context/height;
+                            scrolling python:'no' if context.auto_size else 'auto'"
             width="100%"
-            scrolling="no"
             class="iframeblock loading" onload="onIframeLoaded(this)"></iframe>
     <script tal:condition="context/auto_size">iFrameResize()</script>
 
