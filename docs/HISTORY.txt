@@ -5,6 +5,8 @@ Changelog
 1.3.4 (unreleased)
 ------------------
 
+- Enable scrolling fallback when the iframe resizer is disabled. [lknoepfel]
+ 
 - Make iframe fixes compatible with ftw.iframefix 2.0. [Kevin Bieri]
 
 - Install ftw.iframefix

@@ -32,8 +32,7 @@ class TestIFrameBlock(FunctionalTestCase):
     @browsing
     def test_height_field_is_used_if_auto_size_is_not_set(self, browser):
         """
-        This test makes sure that the url passed to the creation form is added
-        to the iframe tag correctly.
+        Test that the height set in the block is applied to the iframe.
         """
         content_page = create(Builder('sl content page'))
 
@@ -51,21 +50,34 @@ class TestIFrameBlock(FunctionalTestCase):
         )
 
     @browsing
-    def test_scrolling_always_set_to_no(self, browser):
+    def test_scrolling_attribute_depending_on_auto_resize(self, browser):
         """
-        This test makes sure that the url passed to the creation form is added
-        to the iframe tag correctly.
+        The scrolling attribute has to be set to no if the iframe resizer is
+        in use to avoid jittering.
+        When the resizier is disabled the iframe should handle the scrollbars.
+        (-> scrolling: auto)
         """
-        content_page = create(Builder('sl content page'))
-
+        with_resizer = create(Builder('sl content page'))
         create(Builder('iframe block')
-               .having(url=u'http://www.google.com')
-               .within(content_page))
+               .having(url=u'http://www.google.com',
+                       auto_size=True)
+               .within(with_resizer))
 
-        browser.login().visit(content_page)
+        without_resizer = create(Builder('sl content page'))
+        create(Builder('iframe block')
+               .having(url=u'http://www.google.com',
+                       auto_size=False)
+               .within(without_resizer))
 
+        browser.login().visit(with_resizer)
         self.assertEqual(
             'no',
+            browser.css('iframe.iframeblock').first.attrib['scrolling']
+        )
+
+        browser.visit(without_resizer)
+        self.assertEqual(
+            'auto',
             browser.css('iframe.iframeblock').first.attrib['scrolling']
         )
 
