@@ -143,3 +143,46 @@ class TestIFrameBlock(FunctionalTestCase):
             u'http://mypage.com/index.php',
             browser.css('iframe.iframeblock').first.attrib['src'],
             'Switching to file:// is not allowed.')
+
+    def test_default_value_for_height_calculation_method(self):
+        """
+        Test the default value for the height calculation method.
+        """
+        block = create(Builder('iframe block')
+                       .having(url=u'http://www.google.com')
+                       .having(auto_size=True)
+                       .within(create(Builder('sl content page'))))
+
+        view = block.restrictedTraverse('@@block_view')
+        self.assertEqual(
+            u'bodyOffset',
+            view.height_calculation_method
+        )
+
+    @browsing
+    def test_custom_value_for_height_calculation_method(self, browser):
+        """
+        Test setting a custom value for the height calculation method.
+        """
+        block = create(Builder('iframe block')
+                       .having(url=u'http://www.google.com')
+                       .having(auto_size=True)
+                       .within(create(Builder('sl content page'))))
+
+        browser.login()
+
+        # Edit the block and customize the height calculation method.
+        browser.visit(block, view='edit.json')
+        response = browser.json
+        browser.parse(response['content'])
+        browser.fill({
+            'Height calculation method': 'documentElementOffset',
+        })
+        browser.find_button_by_label('Save').click()
+
+        # The value has been set.
+        view = block.restrictedTraverse('@@block_view')
+        self.assertEqual(
+            u'documentElementOffset',
+            view.height_calculation_method
+        )

@@ -34,3 +34,7 @@ class IFrameBlockView(BaseBlock):
             return False
 
         return True
+
+    @property
+    def height_calculation_method(self):
+        return self.context.height_calculation_method or "bodyOffset"
