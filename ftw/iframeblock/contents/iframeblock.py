@@ -36,6 +36,20 @@ class IIFrameBlockSchema(form.Schema):
                       'displayed.'),
         )
 
+    height_calculation_method = schema.TextLine(
+        title=_(u'iframeblock_height_calculation_method_label',
+                default=u'Height calculation method'),
+        description=_(
+            u'iframeblock_height_calculation_method_desc',
+            default=u'See <a href="https://github.com/davidjbradshaw/iframe-resi'
+                    u'zer/tree/v3.5.5#heightcalculationmethod" target="_blank">'
+                    u'iframe-resizer package</a> for the available options.<br>'
+                    u'Defaults to "bodyOffset".'),
+        default=u"",
+        required=False,
+    )
+
+
 alsoProvides(IIFrameBlockSchema, IFormFieldProvider)
 
 
