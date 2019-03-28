@@ -26,10 +26,15 @@ class TestIFrameBlockContentType(FunctionalTestCase):
         browser.visit(content_page)
 
         self.assertTrue(len(browser.css('.sl-block')), 'Expect one block')
-        self.assertEqual(
-            '<iframe width="100%" class="iframeblock loading" '
-            'onload="onIframeLoaded(this)" data-height-calculation-method="bodyOffset" '
-            'src="http://www.google.com" '
-            'scrolling="auto" height="400"></iframe>',
-            browser.css('iframe.iframeblock').first.outerHTML
-        )
+
+        from lxml import html
+        tree = html.fromstring(browser.contents)
+        iframe = tree.xpath('//iframe')[0]
+
+        self.assertEqual(iframe.get('width'), '100%')
+        self.assertEqual(iframe.get('class'), 'iframeblock loading')
+        self.assertEqual(iframe.get('onload'), 'onIframeLoaded(this)')
+        self.assertEqual(iframe.get('src'), 'http://www.google.com')
+        self.assertEqual(iframe.get('height'), '400')
+        self.assertEqual(iframe.get('scrolling'), 'auto')
+        self.assertEqual(iframe.get('data-height-calculation-method'), 'bodyOffset')
