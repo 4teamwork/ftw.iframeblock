@@ -12,6 +12,7 @@ Changelog
 ------------------
 
 - Add new block configuration option for the height calculation method. [mbaechtold]
+- Add Plone 5.1 support [busykoala]
 
 
 1.3.5 (2018-03-20)

@@ -1,7 +1,8 @@
 from ftw.builder import Builder
 from ftw.builder import create
-from ftw.testbrowser import browsing
 from ftw.iframeblock.tests import FunctionalTestCase
+from ftw.testbrowser import browsing
+from plone.protect.authenticator import createToken
 
 
 class TestIFrameBlock(FunctionalTestCase):
@@ -169,6 +170,7 @@ class TestIFrameBlock(FunctionalTestCase):
                        .having(auto_size=True)
                        .within(create(Builder('sl content page'))))
 
+        browser.append_request_header('X-CSRF-TOKEN', createToken())
         browser.login()
 
         # Edit the block and customize the height calculation method.

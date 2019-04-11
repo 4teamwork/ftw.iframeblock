@@ -1,7 +1,8 @@
 from ftw.builder import Builder
 from ftw.builder import create
-from ftw.testbrowser import browsing
 from ftw.iframeblock.tests import FunctionalTestCase
+from ftw.testbrowser import browsing
+from ftw.testing import IS_PLONE_5
 
 
 class TestIFrameBlockBuilder(FunctionalTestCase):
@@ -12,9 +13,10 @@ class TestIFrameBlockBuilder(FunctionalTestCase):
 
     @browsing
     def test_add_iframeblock(self, browser):
+        block_title = u'My iFrame block'
         content_page = create(Builder('sl content page'))
         create(Builder('iframe block')
-               .titled(u'My iFrame block')
+               .titled(block_title)
                .within(content_page))
 
         browser.login().visit(content_page)
