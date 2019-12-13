@@ -271,8 +271,8 @@
 			function debouncedTrigger(){
 				trigger(
 					'Send Page Info',
-					'pageInfo:' + getPageInfo(), 
-					iframe, 
+					'pageInfo:' + getPageInfo(),
+					iframe,
 					iframeId
 				);
 			}
@@ -304,7 +304,7 @@
 			function start(){
 				setListener('Add ', addEventListener);
 			}
-			
+
 			var id = iframeId; //Create locally scoped copy of iFrame ID
 
 			start();
