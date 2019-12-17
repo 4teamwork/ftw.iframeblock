@@ -1,5 +1,6 @@
 from ftw.simplelayout.browser.blocks.base import BaseBlock
 from plone import api
+from textwrap import dedent
 from urlparse import urlparse
 
 
@@ -39,14 +40,17 @@ class IFrameBlockView(BaseBlock):
         """Depending on auto_size on or off this is either passing only
         onIframeLoaded or also the reSizeIframe (incl. arguments) into onload.
         """
-        arguments = '{ \
-                inPageLinks: true, \
-                heightCalculationMethod: \
-                    $("iframe.iframeblock").data("heightCalculationMethod"), \
-                resizedCallback: function () {scroll(0, 0);} \
-            }'
-        return 'onIframeLoaded(this); reSizeIframe({})'.format(arguments) \
-            if self.context.auto_size else 'onIframeLoaded(this)'
+        if self.context.auto_size:
+            arguments = dedent('''
+                {
+                    inPageLinks: true,
+                    heightCalculationMethod: $("iframe.iframeblock").data("heightCalculationMethod"),
+                    resizedCallback: function () {scroll(0, 0);}
+                }
+            ''').strip()
+            return 'onIframeLoaded(this); reSizeIframe({})'.format(arguments)
+        else:
+            return 'onIframeLoaded(this)'
 
     @property
     def height_calculation_method(self):
