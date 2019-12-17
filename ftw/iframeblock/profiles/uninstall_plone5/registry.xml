@@ -1,7 +1,7 @@
 <registry>
 
     <records prefix="plone.resources/ftw-iframeblock-resources"
-             interface='Products.CMFPlone.interfaces.IResourceRegistry'
+             interface="Products.CMFPlone.interfaces.IResourceRegistry"
              remove="True"/>
 
 </registry>
