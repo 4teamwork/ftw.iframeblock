@@ -5,7 +5,7 @@ Changelog
 1.5.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Provide precompiled bundle. [tinagerber]
 
 
 1.5.0 (2019-04-11)
