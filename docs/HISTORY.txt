@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.5.2 (unreleased)
+1.5.2 (2020-01-09)
 ------------------
 
 - Add ftw.iframeblock portal_type translation to plone domain. [tinagerber]
