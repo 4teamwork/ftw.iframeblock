@@ -45,7 +45,8 @@ class IIFrameBlockSchema(form.Schema):
                     u'zer/tree/v3.5.5#heightcalculationmethod" target="_blank">'
                     u'iframe-resizer package</a> for the available options.<br>'
                     u'Defaults to "bodyOffset".'),
-        default=u"",
+        default=u'bodyOffset',
+        missing_value=u'bodyOffset',
         required=False,
     )
 
