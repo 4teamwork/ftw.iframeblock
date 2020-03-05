@@ -7,24 +7,8 @@
     <iframe tal:attributes="src view/get_url;
                             height context/height;
                             scrolling python:'no' if context.auto_size else 'auto';
-                            onload view/method_calls;
+                            data-auto-size context/auto_size;
                             data-height-calculation-method view/height_calculation_method"
             width="100%"
             class="iframeblock loading"></iframe>
-
-    <script tal:condition="context/auto_size">
-      (function (factory) {
-        // environment detection
-        if (typeof define === 'function' && define.amd) {
-          // AMD. require the modules we need
-          require(['jquery', 'iframeResizer'], factory);
-        } else {
-          // Browser globals
-          factory(window.jQuery, window.iFrameResize);
-        }
-      }(function ($, iFrameResize) {
-        reSizeIframe = iFrameResize;
-      }));
-    </script>
-
 </html>
