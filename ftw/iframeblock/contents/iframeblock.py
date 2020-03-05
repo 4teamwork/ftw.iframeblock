@@ -41,9 +41,10 @@ class IIFrameBlockSchema(form.Schema):
                 default=u'Height calculation method'),
         description=_(
             u'iframeblock_height_calculation_method_desc',
-            default=u'See <a href="https://github.com/davidjbradshaw/iframe-resi'
-                    u'zer/tree/v3.5.5#heightcalculationmethod" target="_blank">'
-                    u'iframe-resizer package</a> for the available options.<br>'
+            default=u'See <a href="https://github.com/davidjbradshaw/iframe-'
+                    u'resizer/blob/v4.2.9/docs/parent_page/options.md#height'
+                    u'calculationmethod" target="_blank">iframe-resizer '
+                    u'package</a> for the available options.<br>'
                     u'Defaults to "bodyOffset".'),
         default=u'bodyOffset',
         missing_value=u'bodyOffset',
