@@ -7,10 +7,7 @@
 }(function ($, iFrameResize) {
   "use strict";
 
-  // We have to wait for the ready and then add the onload event listener directly on the
-  // iframe because the iframe does not propagate the onload back to document.
-  $(document).ready(function () {
-    $('iframe').on('load', function () {
+  function initIFrame() {
       var iframe = $(this);
 
       if (iframe.data('autoSize') === 'True') {
@@ -22,6 +19,15 @@
       }
 
       iframe.prev().removeClass('loading');
+  }
+
+  // We have to wait for the ready and then add the onload event listener directly on the
+  // iframe because the iframe does not propagate the onload back to document.
+  $(document).ready(function () {
+    $('iframe').on('load', initIFrame);
+
+    $(document).on('onBeforeClose', '.overlay', function () {
+      $('iframe').each(initIFrame);
     });
   });
 }));
