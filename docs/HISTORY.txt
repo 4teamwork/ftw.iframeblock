@@ -5,7 +5,9 @@ Changelog
 1.5.3 (unreleased)
 ------------------
 
-- Fix iframe auto resizer [Nachtalb]
+- Fix iframe auto resizer not being triggered on plone 4 [Nachtalb]
+- Ensure iframeResizer.contentWindow is included on Plone 5 - in case iframe
+  includes a page from the same site [Nachtalb]
 - Update plone 4 iframe resizer to same version as plone 4 [djowett-ftw]
 
 
