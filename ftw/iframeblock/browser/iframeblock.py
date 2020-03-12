@@ -35,23 +35,3 @@ class IFrameBlockView(BaseBlock):
             return False
 
         return True
-
-    def method_calls(self):
-        """Depending on auto_size on or off this is either passing only
-        onIframeLoaded or also the reSizeIframe (incl. arguments) into onload.
-        """
-        if self.context.auto_size:
-            arguments = dedent('''
-                {
-                    inPageLinks: true,
-                    heightCalculationMethod: $("iframe.iframeblock").data("heightCalculationMethod"),
-                    resizedCallback: function () {scroll(0, 0);}
-                }
-            ''').strip()
-            return 'onIframeLoaded(this); reSizeIframe({})'.format(arguments)
-        else:
-            return 'onIframeLoaded(this)'
-
-    @property
-    def height_calculation_method(self):
-        return self.context.height_calculation_method or "bodyOffset"

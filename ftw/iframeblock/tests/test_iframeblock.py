@@ -154,10 +154,9 @@ class TestIFrameBlock(FunctionalTestCase):
                        .having(auto_size=True)
                        .within(create(Builder('sl content page'))))
 
-        view = block.restrictedTraverse('@@block_view')
         self.assertEqual(
             u'bodyOffset',
-            view.height_calculation_method
+            block.height_calculation_method
         )
 
     @browsing
@@ -182,9 +181,7 @@ class TestIFrameBlock(FunctionalTestCase):
         })
         browser.find_button_by_label('Save').click()
 
-        # The value has been set.
-        view = block.restrictedTraverse('@@block_view')
         self.assertEqual(
             u'documentElementOffset',
-            view.height_calculation_method
+            block.height_calculation_method
         )

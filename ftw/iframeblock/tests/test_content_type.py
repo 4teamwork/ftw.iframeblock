@@ -10,10 +10,10 @@ class TestIFrameBlockContentType(FunctionalTestCase):
     params_list = [
         ('width', '100%'),
         ('class', 'iframeblock loading'),
-        ('onload', 'onIframeLoaded(this)'),
         ('src', 'http://www.google.com'),
         ('height', '400'),
         ('scrolling', 'auto'),
+        ('data-auto-size', 'False'),
         ('data-height-calculation-method', 'bodyOffset'),
     ]
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-08-16 09:31+0000\n"
+"POT-Creation-Date: 2020-03-05 19:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,15 +14,24 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0\n"
 "Preferred-Encodings: utf-8 latin1\n"
 
-#: ./ftw/iframeblock/configure.zcml:21
+#: ./ftw/iframeblock/configure.zcml:32
+msgid "Register ftw.iframeblock generally"
+msgstr ""
+
+#: ./ftw/iframeblock/configure.zcml:41
+msgid "Uninstall ftw.iframeblock"
+msgstr ""
+
+#: ./ftw/iframeblock/configure.zcml:23
 msgid "ftw.iframeblock"
 msgstr ""
 
 #: ./ftw/iframeblock/profiles/default/types/ftw.iframeblock.IFrameBlock.xml
+#: ./ftw/iframeblock/profiles/default_plone5/types/ftw.iframeblock.IFrameBlock.xml
 msgid "iFrame block"
 msgstr ""
 
-#: ./ftw/iframeblock/configure.zcml:21
+#: ./ftw/iframeblock/configure.zcml:23
 msgid "iFrame block (add-on for ftw.simplelayout)"
 msgstr ""
 
@@ -34,6 +43,16 @@ msgstr ""
 #. Default: "Auto Size"
 #: ./ftw/iframeblock/contents/iframeblock.py:27
 msgid "iframeblock_auto_size_label"
+msgstr ""
+
+#. Default: "See <a href=\"https://github.com/davidjbradshaw/iframe-resizer/blob/v4.2.9/docs/parent_page/options.md#heightcalculationmethod\" target=\"_blank\">iframe-resizer package</a> for the available options.<br>Defaults to \"bodyOffset\"."
+#: ./ftw/iframeblock/contents/iframeblock.py:42
+msgid "iframeblock_height_calculation_method_desc"
+msgstr ""
+
+#. Default: "Height calculation method"
+#: ./ftw/iframeblock/contents/iframeblock.py:40
+msgid "iframeblock_height_calculation_method_label"
 msgstr ""
 
 #. Default: "Height"
