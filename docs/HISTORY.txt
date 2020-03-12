@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.5.3 (unreleased)
+1.5.3 (2020-03-12)
 ------------------
 
 - Fix iframe auto resizer not being triggered on plone 4 [Nachtalb]
