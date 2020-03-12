@@ -5,7 +5,7 @@ Changelog
 1.5.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Re-add ability to override iframe autoresizer options which has gone in previous version [Nachtalb]
 
 
 1.5.3 (2020-03-12)
