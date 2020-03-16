@@ -14,7 +14,7 @@ class TestIFrameBlockContentType(FunctionalTestCase):
         ('height', '400'),
         ('scrolling', 'auto'),
         ('data-auto-size', 'False'),
-        ('data-height-calculation-method', 'bodyOffset'),
+        ('data-resizer-options', '{"heightCalculationMethod": "bodyOffset"}'),
     ]
 
     def setUp(self):

@@ -6,16 +6,18 @@
   }
 }(function ($, iFrameResize) {
   "use strict";
+  var default_options = {
+    inPageLinks: true,
+    onResized: function () {scroll(0, 0);},
+  }
 
   function initIFrame() {
       var iframe = $(this);
 
       if (iframe.data('autoSize') === 'True') {
-        iFrameResize({
-          inPageLinks: true,
-          heightCalculationMethod: iframe.data('heightCalculationMethod'),
-          onResized: function () {scroll(0, 0);},
-        }, this);
+        var set_options = iframe.data('resizerOptions');
+        var options = Object.assign({}, default_options, set_options);
+        iFrameResize(options, this);
       }
 
       iframe.prev().removeClass('loading');

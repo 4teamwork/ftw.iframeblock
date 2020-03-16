@@ -1,12 +1,12 @@
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from ftw.simplelayout.browser.blocks.base import BaseBlock
 from plone import api
-from textwrap import dedent
 from urlparse import urlparse
+import json
 
 
 class IFrameBlockView(BaseBlock):
-    def __call__(self):
-        return self.index()
+    template = ViewPageTemplateFile('templates/iframeblock.pt')
 
     def can_add(self):
         return api.user.has_permission('ftw.iframeblock: Add iFrame block')
@@ -35,3 +35,8 @@ class IFrameBlockView(BaseBlock):
             return False
 
         return True
+
+    def resizer_options(self):
+        return json.dumps({
+            'heightCalculationMethod': self.context.height_calculation_method,
+        })

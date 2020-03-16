@@ -12,7 +12,6 @@
         name="block_view"
         permission="zope2.View"
         class=".iframeblock.IFrameBlockView"
-        template="templates/iframeblock.pt"
         />
 
 </configure>
