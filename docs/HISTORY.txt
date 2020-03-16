@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.5.4 (unreleased)
+1.6.0 (2020-03-16)
 ------------------
 
 - Re-add ability to override iframe autoresizer options which has gone in previous version [Nachtalb]
