@@ -11,6 +11,9 @@ Changelog
 1.5.3 (2020-03-12)
 ------------------
 
+1.5.3 should have been a minor release (1.6.0) rather than a patch release.
+The javascript was moved completely to JS files, thus customizations might have to be adjusted.
+
 - Fix iframe auto resizer not being triggered on plone 4 [Nachtalb]
 - Ensure iframeResizer.contentWindow is included on Plone 5 - in case iframe
   includes a page from the same site [Nachtalb]
