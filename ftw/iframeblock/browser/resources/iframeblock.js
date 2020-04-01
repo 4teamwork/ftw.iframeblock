@@ -16,7 +16,7 @@
 
       if (iframe.data('autoSize') === 'True') {
         var set_options = iframe.data('resizerOptions');
-        var options = Object.assign({}, default_options, set_options);
+        var options = $.extend({},default_options,set_options);
         iFrameResize(options, this);
       }
 

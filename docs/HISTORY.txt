@@ -5,7 +5,7 @@ Changelog
 1.6.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix iframe block for Internet Explorer [Nachtalb]
 
 
 1.6.0 (2020-03-16)
