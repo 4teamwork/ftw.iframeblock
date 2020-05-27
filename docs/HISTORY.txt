@@ -5,7 +5,7 @@ Changelog
 1.6.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove plone.app.referenceablebehavior in plone 5. [busykoala]
 
 
 1.6.1 (2020-04-02)
