@@ -8,6 +8,7 @@
                             height context/height;
                             scrolling python:'no' if context.auto_size else 'auto';
                             data-auto-size context/auto_size;
+                            data-auto-jump context/auto_jump | python: True;
                             data-resizer-options view/resizer_options;"
             width="100%"
             class="iframeblock loading"></iframe>

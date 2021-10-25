@@ -5,7 +5,7 @@ Changelog
 1.6.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Implement option to disable automatic jump to top while navigation in iframe. [mathias.leimgruber]
 
 
 1.6.2 (2020-05-29)

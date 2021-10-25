@@ -8,7 +8,6 @@
   "use strict";
   var default_options = {
     inPageLinks: true,
-    onResized: function () {scroll(0, 0);},
   }
 
   function initIFrame() {
@@ -16,7 +15,13 @@
 
       if (iframe.data('autoSize') === 'True') {
         var set_options = iframe.data('resizerOptions');
-        var options = $.extend({},default_options,set_options);
+
+        var autoJump = { onResized: function () {scroll(0, 0);} };
+        if (iframe.data('autoJump') !== 'True') {
+          autoJump = {}
+        }
+
+        var options = $.extend({},default_options,set_options, autoJump);
         iFrameResize(options, this);
       }
 

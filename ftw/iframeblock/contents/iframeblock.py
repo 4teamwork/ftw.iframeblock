@@ -23,6 +23,16 @@ class IIFrameBlockSchema(form.Schema):
         required=False,
     )
 
+    auto_jump = schema.Bool(
+        title=_(u'iframeblock_auto_jump_label', default=u'Automatisches Springen aktivieren'),
+        description=_(u'iframeblock_auto_desc',
+                      default=u'If enabled (default - yes), the page scrolls to the top, '
+                      'if the height of the site changes. For example while nagivation in '
+                      'the iframe itself. This mimixs a more natural behavior.'),
+        default=True,
+        required=False,
+    )
+
     auto_size = schema.Bool(
         title=_(u'iframeblock_auto_size_label', default=u'Auto Size'),
         default=False,
@@ -34,7 +44,7 @@ class IIFrameBlockSchema(form.Schema):
                       'When auto resize is set, the value of the "Height" '
                       'field wont have any influence on how the block is '
                       'displayed.'),
-        )
+    )
 
     height_calculation_method = schema.TextLine(
         title=_(u'iframeblock_height_calculation_method_label',
